@@ -1,8 +1,8 @@
 ---
 layout: archive
-permalink: /data-science/
+permalink: /datascience/
 title: "Data Science Posts"
-author_profile: true
+author-profile: true
 header:
   image: "/images/Machine-Learning.jpg"
 ---
