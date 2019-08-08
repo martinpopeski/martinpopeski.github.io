@@ -296,7 +296,6 @@ defaults:
       related: true
 
   # _pages
-
   - scope:
       path: ""
       type: pages
