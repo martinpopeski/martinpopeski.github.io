@@ -1,7 +1,7 @@
 ---
 layout: archive
 permalink: /machine-learning/
-title: "Data Science Posts"
+title: "Projects"
 author-profile: true
 header:
   image: "/images/Machine-Learning.jpg"
