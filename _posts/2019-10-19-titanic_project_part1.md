@@ -461,136 +461,6 @@ bool_duplicate_tickets.sum()
 ```python
 #since the number of non-unique tickets was significant, I created a dataset with just those tickets to invesigate it
 duplicate_tickets = titanic_data[bool_duplicate_tickets]
-duplicate_tickets.head()
-```
-
-
-
-
-<div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>Survived</th>
-      <th>Pclass</th>
-      <th>Name</th>
-      <th>Sex</th>
-      <th>Age</th>
-      <th>SibSp</th>
-      <th>Parch</th>
-      <th>Ticket</th>
-      <th>Fare</th>
-      <th>Cabin</th>
-      <th>Embarked</th>
-    </tr>
-    <tr>
-      <th>PassengerId</th>
-      <th></th>
-      <th></th>
-      <th></th>
-      <th></th>
-      <th></th>
-      <th></th>
-      <th></th>
-      <th></th>
-      <th></th>
-      <th></th>
-      <th></th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>4</th>
-      <td>1</td>
-      <td>1</td>
-      <td>Futrelle, Mrs. Jacques Heath (Lily May Peel)</td>
-      <td>female</td>
-      <td>35.0</td>
-      <td>1</td>
-      <td>0</td>
-      <td>113803</td>
-      <td>53.1000</td>
-      <td>C123</td>
-      <td>S</td>
-    </tr>
-    <tr>
-      <th>8</th>
-      <td>0</td>
-      <td>3</td>
-      <td>Palsson, Master. Gosta Leonard</td>
-      <td>male</td>
-      <td>2.0</td>
-      <td>3</td>
-      <td>1</td>
-      <td>349909</td>
-      <td>21.0750</td>
-      <td>NaN</td>
-      <td>S</td>
-    </tr>
-    <tr>
-      <th>9</th>
-      <td>1</td>
-      <td>3</td>
-      <td>Johnson, Mrs. Oscar W (Elisabeth Vilhelmina Berg)</td>
-      <td>female</td>
-      <td>27.0</td>
-      <td>0</td>
-      <td>2</td>
-      <td>347742</td>
-      <td>11.1333</td>
-      <td>NaN</td>
-      <td>S</td>
-    </tr>
-    <tr>
-      <th>10</th>
-      <td>1</td>
-      <td>2</td>
-      <td>Nasser, Mrs. Nicholas (Adele Achem)</td>
-      <td>female</td>
-      <td>14.0</td>
-      <td>1</td>
-      <td>0</td>
-      <td>237736</td>
-      <td>30.0708</td>
-      <td>NaN</td>
-      <td>C</td>
-    </tr>
-    <tr>
-      <th>11</th>
-      <td>1</td>
-      <td>3</td>
-      <td>Sandstrom, Miss. Marguerite Rut</td>
-      <td>female</td>
-      <td>4.0</td>
-      <td>1</td>
-      <td>1</td>
-      <td>PP 9549</td>
-      <td>16.7000</td>
-      <td>G6</td>
-      <td>S</td>
-    </tr>
-  </tbody>
-</table>
-</div>
-
-
-
-
-```python
 """grouping this new datasets with duplicate tickets
 and filling in some of the missing values in cabin according to the ticket they have
 i.e. if two people have the same ticket and for one of them Cabin information is missing
@@ -624,137 +494,6 @@ len(titanic_data['Cabin']) - titanic_data['Cabin'].sum()
 
 
     676
-
-
-
-
-```python
-titanic_data.head()
-```
-
-
-
-
-<div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>Survived</th>
-      <th>Pclass</th>
-      <th>Name</th>
-      <th>Sex</th>
-      <th>Age</th>
-      <th>SibSp</th>
-      <th>Parch</th>
-      <th>Ticket</th>
-      <th>Fare</th>
-      <th>Cabin</th>
-      <th>Embarked</th>
-    </tr>
-    <tr>
-      <th>PassengerId</th>
-      <th></th>
-      <th></th>
-      <th></th>
-      <th></th>
-      <th></th>
-      <th></th>
-      <th></th>
-      <th></th>
-      <th></th>
-      <th></th>
-      <th></th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>1</th>
-      <td>0</td>
-      <td>3</td>
-      <td>Braund, Mr. Owen Harris</td>
-      <td>male</td>
-      <td>22.0</td>
-      <td>1</td>
-      <td>0</td>
-      <td>A/5 21171</td>
-      <td>7.2500</td>
-      <td>0</td>
-      <td>S</td>
-    </tr>
-    <tr>
-      <th>2</th>
-      <td>1</td>
-      <td>1</td>
-      <td>Cumings, Mrs. John Bradley (Florence Briggs Th...</td>
-      <td>female</td>
-      <td>38.0</td>
-      <td>1</td>
-      <td>0</td>
-      <td>PC 17599</td>
-      <td>71.2833</td>
-      <td>1</td>
-      <td>C</td>
-    </tr>
-    <tr>
-      <th>3</th>
-      <td>1</td>
-      <td>3</td>
-      <td>Heikkinen, Miss. Laina</td>
-      <td>female</td>
-      <td>26.0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>STON/O2. 3101282</td>
-      <td>7.9250</td>
-      <td>0</td>
-      <td>S</td>
-    </tr>
-    <tr>
-      <th>4</th>
-      <td>1</td>
-      <td>1</td>
-      <td>Futrelle, Mrs. Jacques Heath (Lily May Peel)</td>
-      <td>female</td>
-      <td>35.0</td>
-      <td>1</td>
-      <td>0</td>
-      <td>113803</td>
-      <td>53.1000</td>
-      <td>1</td>
-      <td>S</td>
-    </tr>
-    <tr>
-      <th>5</th>
-      <td>0</td>
-      <td>3</td>
-      <td>Allen, Mr. William Henry</td>
-      <td>male</td>
-      <td>35.0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>373450</td>
-      <td>8.0500</td>
-      <td>0</td>
-      <td>S</td>
-    </tr>
-  </tbody>
-</table>
-</div>
-
 
 
 
@@ -934,8 +673,8 @@ titanic_data.Fare = titanic_data.groupby('Ticket').Fare.apply(lambda x: x / len(
 
 ```python
 #Checking whether the method worked with some of the passengers that had highest Fare previously
-print(titanic_data['Fare'].nlargest(10))
-print(titanic_data.loc[[28,89,342,439]])
+print(titanic_data['Fare'].nlargest(10)) #Seems more reasonable than the previous values
+print(titanic_data.loc[[28,89,342,439]][['Ticket','Fare']])
 ```
 
     PassengerId
@@ -950,84 +689,16 @@ print(titanic_data.loc[[28,89,342,439]])
     300    123.7604
     836     83.1583
     Name: Fare, dtype: float64
-                 Survived  Pclass                            Name     Sex   Age  \
-    PassengerId                                                                   
-    28                  0       1  Fortune, Mr. Charles Alexander    male  19.0   
-    89                  1       1      Fortune, Miss. Mabel Helen  female  23.0   
-    342                 1       1  Fortune, Miss. Alice Elizabeth  female  24.0   
-    439                 0       1               Fortune, Mr. Mark    male  64.0   
 
-                 SibSp  Parch Ticket   Fare  Cabin Embarked  
+                  Ticket   Fare  
     PassengerId                                              
-    28               3      2  19950  65.75      1        S  
-    89               3      2  19950  65.75      1        S  
-    342              3      2  19950  65.75      1        S  
-    439              1      4  19950  65.75      1        S  
+    28             19950  65.75   
+    89             19950  65.75   
+    342            19950  65.75   
+    439            19950  65.75   
 
 
 
-```python
-titanic_data['Fare'].nlargest(10)
-```
-
-
-
-
-    PassengerId
-    528    221.7792
-    378    211.5000
-    259    170.7764
-    680    170.7764
-    738    170.7764
-    312    131.1875
-    743    131.1875
-    119    123.7604
-    300    123.7604
-    836     83.1583
-    Name: Fare, dtype: float64
-
-
-
-
-```python
-print(titanic_data.loc[[528,378,259,680,738,312,743,119,300]]) # Seemes more reasonable compared the the previous values
-```
-
-                 Survived  Pclass  \
-    PassengerId                     
-    528                 0       1   
-    378                 0       1   
-    259                 1       1   
-    680                 1       1   
-    738                 1       1   
-    312                 1       1   
-    743                 1       1   
-    119                 0       1   
-    300                 1       1   
-
-                                                            Name     Sex   Age  \
-    PassengerId                                                                  
-    528                                       Farthing, Mr. John    male   NaN   
-    378                                Widener, Mr. Harry Elkins    male  27.0   
-    259                                         Ward, Miss. Anna  female  35.0   
-    680                       Cardeza, Mr. Thomas Drake Martinez    male  36.0   
-    738                                   Lesurer, Mr. Gustave J    male  35.0   
-    312                               Ryerson, Miss. Emily Borie  female  18.0   
-    743                    Ryerson, Miss. Susan Parker "Suzette"  female  21.0   
-    119                                 Baxter, Mr. Quigg Edmond    male  24.0   
-    300          Baxter, Mrs. James (Helene DeLaudeniere Chaput)  female  50.0   
-
-                 SibSp  Parch    Ticket      Fare  Cabin Embarked  
-    PassengerId                                                    
-    528              0      0  PC 17483  221.7792      1        S  
-    378              0      2    113503  211.5000      1        C  
-    259              0      0  PC 17755  170.7764      1        C  
-    680              0      1  PC 17755  170.7764      1        C  
-    738              0      0  PC 17755  170.7764      1        C  
-    312              2      2  PC 17608  131.1875      1        C  
-    743              2      2  PC 17608  131.1875      1        C  
-    119              0      1  PC 17558  123.7604      1        C  
-    300              0      1  PC 17558  123.7604      1        C  
 
 
 
@@ -1396,7 +1067,7 @@ titanic_data['Fare'].describe()
 ```python
 """Grouping by port and exploring the differences
 in Fare, Age according to the port the price in port
-C seemes to be much higher than the other 2, while
+C seems to be much higher than the other 2, while
 there is no significant difference in age mean"""
 
 grouped_by_port = titanic_data.groupby('Embarked')
@@ -1520,7 +1191,8 @@ will be filled with the average of this group"""
 
 group_by_sex_n_class.Age = group_by_sex_n_class.Age.transform(lambda x: x.fillna(x.mean()))
 titanic_data.Age = titanic_data.Age.fillna(value = group_by_sex_n_class.Age)
-num_missing_values(titanic_data['Age'])
+print(num_missing_values(titanic_data['Age']))
+titanic_data['Age'] = titanic_data['Age'].astype(int) #converting all the age values in integers
 ```
 
 
@@ -1531,134 +1203,7 @@ num_missing_values(titanic_data['Age'])
 
 
 
-```python
-#converting all the age values in integers
-titanic_data['Age'] = titanic_data['Age'].astype(int)
-titanic_data.head()
-```
 
-
-
-
-<div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>Survived</th>
-      <th>Pclass</th>
-      <th>Name</th>
-      <th>Sex</th>
-      <th>Age</th>
-      <th>SibSp</th>
-      <th>Parch</th>
-      <th>Ticket</th>
-      <th>Fare</th>
-      <th>Cabin</th>
-      <th>Embarked</th>
-    </tr>
-    <tr>
-      <th>PassengerId</th>
-      <th></th>
-      <th></th>
-      <th></th>
-      <th></th>
-      <th></th>
-      <th></th>
-      <th></th>
-      <th></th>
-      <th></th>
-      <th></th>
-      <th></th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>1</th>
-      <td>0</td>
-      <td>3</td>
-      <td>Braund, Mr. Owen Harris</td>
-      <td>male</td>
-      <td>22</td>
-      <td>1</td>
-      <td>0</td>
-      <td>A/5 21171</td>
-      <td>7.2500</td>
-      <td>0</td>
-      <td>S</td>
-    </tr>
-    <tr>
-      <th>2</th>
-      <td>1</td>
-      <td>1</td>
-      <td>Cumings, Mrs. John Bradley (Florence Briggs Th...</td>
-      <td>female</td>
-      <td>38</td>
-      <td>1</td>
-      <td>0</td>
-      <td>PC 17599</td>
-      <td>71.2833</td>
-      <td>1</td>
-      <td>C</td>
-    </tr>
-    <tr>
-      <th>3</th>
-      <td>1</td>
-      <td>3</td>
-      <td>Heikkinen, Miss. Laina</td>
-      <td>female</td>
-      <td>26</td>
-      <td>0</td>
-      <td>0</td>
-      <td>STON/O2. 3101282</td>
-      <td>7.9250</td>
-      <td>0</td>
-      <td>S</td>
-    </tr>
-    <tr>
-      <th>4</th>
-      <td>1</td>
-      <td>1</td>
-      <td>Futrelle, Mrs. Jacques Heath (Lily May Peel)</td>
-      <td>female</td>
-      <td>35</td>
-      <td>1</td>
-      <td>0</td>
-      <td>113803</td>
-      <td>26.5500</td>
-      <td>1</td>
-      <td>S</td>
-    </tr>
-    <tr>
-      <th>5</th>
-      <td>0</td>
-      <td>3</td>
-      <td>Allen, Mr. William Henry</td>
-      <td>male</td>
-      <td>35</td>
-      <td>0</td>
-      <td>0</td>
-      <td>373450</td>
-      <td>8.0500</td>
-      <td>0</td>
-      <td>S</td>
-    </tr>
-  </tbody>
-</table>
-</div>
 
 
 
@@ -1882,6 +1427,7 @@ titanic_data.describe() #there doesn't seem to be any weird values regarding in 
 
 
 ```python
+#checking for missing values again
 print('Column', ' Number of missing values')
 print('Survived', num_missing_values(titanic_data['Survived']))
 print('Pclass', num_missing_values(titanic_data['Pclass']))
