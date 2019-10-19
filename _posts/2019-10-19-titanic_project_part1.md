@@ -1,7 +1,7 @@
 ---
 title: "Exploring the Titanic accident-Part 1: Cleaning the data"
 date: 2019-10-19
-tags: [data analysis, data cleaning, Python]
+tags: [data cleaning, data science]
 excerpt: "Data Science, Data Analysis, Data Cleaning"
 ---
 
