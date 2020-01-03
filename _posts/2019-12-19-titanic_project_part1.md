@@ -1,6 +1,6 @@
 ---
 title: "Exploring the Titanic accident-Part 1: Cleaning the data"
-date: 2019-10-19
+date: 2019-12-19
 tags: [data cleaning, data science]
 excerpt: "Data Science, Data Analysis, Data Cleaning"
 ---
